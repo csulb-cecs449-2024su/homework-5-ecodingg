@@ -28,7 +28,8 @@ Mesh3D::Mesh3D(const std::vector<Vertex3D>& vertices, const std::vector<uint32_t
 
 	// Attribute 1 is texture (u,v).
 	// TODO: configure a second vertex attribute, which is two floats for u and v.
-
+	glVertexAttribPointer(1, 2, GL_FLOAT, false, sizeof(Vertex3D), (void*)12);
+	glEnableVertexAttribArray(1);
 
 
 
