@@ -32,7 +32,7 @@ struct Scene {
 ShaderProgram textureShader() {
 	ShaderProgram shader;
 	try {
-		shader.load("shaders/texture_perspective.vert", "shaders/texturing.frag");
+		shader.load("shaders/texture_perspective.vert", "shaders/texture_inverted.frag");
 	}
 	catch (std::runtime_error& e) {
 		std::cout << "ERROR: " << e.what() << std::endl;
@@ -59,7 +59,7 @@ Scene bunnyTextured() {
 // A scene of a textured triangle.
 Scene triangle() {
 	StbImage wall;
-	wall.loadFromFile("models/wall.jpg");
+	wall.loadFromFile("models/paint.jpg");
 
 	auto triangle = Object3D(std::make_shared<Mesh3D>(Mesh3D::triangle(wall)));
 	triangle.move(glm::vec3(0, 0, -2));
