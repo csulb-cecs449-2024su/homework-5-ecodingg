@@ -42,7 +42,7 @@ ShaderProgram textureShader() {
 }
 
 /*
-* YOU CAN USE THIS SCENE ONLY AFTER YOU HAVE FINISHED assimpLoad()
+* YOU CAN USE THIS SCENE ONLY AFTER YOU HAVE FINISHED AssimpLoad()
 */
 Scene bunnyTextured() {
 	auto bunny = assimpLoad("models/bunny_textured.obj", true); // will automatically load the associated texture image.

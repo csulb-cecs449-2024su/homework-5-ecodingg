@@ -10,5 +10,5 @@ uniform sampler2D baseTexture;
 
 void main() {
     // Sample the texture image at the fragment's texture coordinate.
-    FragColor = texture(baseTexture, TexCoord);
+    FragColor = 1-texture(baseTexture, TexCoord);
 }
