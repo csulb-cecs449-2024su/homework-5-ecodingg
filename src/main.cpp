@@ -33,7 +33,7 @@ ShaderProgram textureShader() {
 	ShaderProgram shader;
 	try {
 		shader.load("shaders/texture_perspective.vert", "shaders/texture_inverted.frag");
-		//shader.load("shaders/texture_perspective.vert", "shaders/texturing.frag");
+		shader.load("shaders/texture_perspective.vert", "shaders/texturing.frag");
 	}
 	catch (std::runtime_error& e) {
 		std::cout << "ERROR: " << e.what() << std::endl;
@@ -61,6 +61,7 @@ Scene bunnyTextured() {
 Scene triangle() {
 	StbImage wall;
 	wall.loadFromFile("models/paint.jpg");
+	//wall.loadFromFile("models/pikmin2.jpg");
 
 	auto triangle = Object3D(std::make_shared<Mesh3D>(Mesh3D::triangle(wall)));
 	triangle.move(glm::vec3(0, 0, -2));
