@@ -33,6 +33,7 @@ ShaderProgram textureShader() {
 	ShaderProgram shader;
 	try {
 		shader.load("shaders/texture_perspective.vert", "shaders/texture_inverted.frag");
+		//shader.load("shaders/texture_perspective.vert", "shaders/texturing.frag");
 	}
 	catch (std::runtime_error& e) {
 		std::cout << "ERROR: " << e.what() << std::endl;
